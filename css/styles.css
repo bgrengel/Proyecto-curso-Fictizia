@@ -49,7 +49,7 @@ header {
 }
 
 
-.fileCard {
+.gallery-file-card {
   font-family: "Quicksand", sans-serif;
   margin-bottom: 30px;
   width: 280px;
@@ -57,7 +57,21 @@ header {
   padding-bottom: 20px;
 }
 
-.fileCard img {
+.detail-file-card {
+    background-color: whitesmoke;
+    width: 100%;
+    font-family: "Quicksand", sans-serif;
+
+}
+
+/*CARRUSEL DE IMÁGENES*/
+
+.file-card figure{
+  margin-top: 2px;
+  margin-bottom: 20px;
+}
+
+.file-card img {
     display: block;
     text-align: center;
     max-width: 100%;
@@ -67,9 +81,9 @@ header {
 /*INFO DEL ANIMAL*/
 
 .animalInfo {
-
     width:100%;
     overflow: hidden;
+
 }
 
 
@@ -116,8 +130,8 @@ header {
 
 .buttons {
   display: flex;
-  align-items: center;
-  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .buttons a {
@@ -125,6 +139,7 @@ header {
   padding: 10px;
   background-color: #78C0A8;
   color: white;
+  margin: 0 10px;
   text-decoration: none;
   font-size: 18px;
   text-align: center;
@@ -133,7 +148,33 @@ header {
   -webkit-font-smoothing: antialiased;
 }
 
+.detail-info {
+  padding: 20px 40px 20px 40px ;
+  font-size: 15px ;
+  color: #34302F;
+  line-height: 150% ;
+}
 
+
+.detail-animal-info h1 {
+  margin-bottom: 40px ;
+  margin-top: 20px ;
+  line-height: normal ;
+  font-family: "Gloria Hallelujah", serif ;
+  font-size: 50px;
+  //color: blueviolet ;
+  border-bottom: 2px double #888;
+
+}
+
+.detail-animal-info ul {
+  font-weight: 600;
+  -webkit-font-smoothing: antialiased;
+}
+
+.parrafos{
+  margin-top: 30px ;
+}
 
 .animalInfo a:hover {
     background-color: #DA9F3B ;
@@ -142,11 +183,9 @@ header {
     box-shadow: 2px 2px 5px #999 ;
 }
 
-.animalInfo a:active {
+.animal-info a:active {
     background-color: palevioletred;
-
 }
-
 
 
 
@@ -159,12 +198,10 @@ header {
 
 /* Esto no se ve en movil */
 .name {
-
   display: none;
 }
 
 .legal {
-
   display: none;
 }
 
@@ -211,7 +248,9 @@ footer div.address {
   margin: 20px;
 }
 
-
+.icon {
+  display: inline-block;
+}
 
 .icon svg {
   width: 100%;
@@ -232,30 +271,22 @@ footer div.address {
     box-sizing: border-box;
   }
 
-.page-text {
-
-}
-
-.titulo {
-  font-size: 48px;
-}
-
-.titulo2 {
-  font-size: 24px;
-}
-
-.texto {
-  font-size: 18px;
-}
-
-
-  /*
-
-   .fileCard:last-child {
-      width: 100%
+  .page-text {
 
   }
-*/
+
+  .titulo {
+    font-size: 48px;
+  }
+
+  .titulo2 {
+    font-size: 24px;
+  }
+
+  .texto {
+    font-size: 18px;
+  }
+
   /************************************/
   /************** FOOTER **************/
   /************************************/
@@ -325,13 +356,12 @@ footer div.address {
   }
 
   .titulo2 {
-    font-size: 32px;
+    font-size: 30px;
     margin-bottom: 48px;
   }
 
   .texto {
-    font-size: 30px;
-    font-size: 26px;
+    font-size: 22px;
     margin-bottom: 50px;
   }
 
@@ -343,8 +373,18 @@ footer div.address {
     padding: 0 10%;
   }
 
-  .fileCard {
+  .gallery-file-card {
     width: 337px;
+  }
+
+
+  /*Botones*/
+
+
+
+
+  .buttons a {
+    flex-basis: 240px;
   }
 
   /************************************/
