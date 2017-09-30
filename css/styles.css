@@ -3,7 +3,7 @@
 
 html {
   font-family: "Quicksand", sans-serif;
-}
+} 
 
 
 
@@ -13,97 +13,57 @@ header {
   border-bottom: 2px double #888;
 }
 
-.gallery {
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-around;
-  margin: 20px 0 0;
-  flex-flow: row wrap;
-}
-
-.page-text {
-  padding-left: 10%;
-  padding-right: 10%;
-  text-align: center;
-}
-
-
-.titulo {
-  margin-bottom: 23px;
-  line-height: normal;
-  font-family: "Gloria Hallelujah", serif;
-  font-size: 28px;
-}
-
-.titulo2 {
-  margin: 0px 0 28px 0;
-  line-height: normal;
-  font-weight: bolder;
-  color: #9F5532;
-  font-size: 14px;
-}
-
-.texto {
-  font-size: 14px;
-  margin-bottom: 22px;
-}
 
 
 .fileCard {
-  font-family: "Quicksand", sans-serif;
-  margin-bottom: 30px;
-  width: 280px;
-  box-shadow: #ccc 1px 1px 7px 1px;
-  padding-bottom: 20px;
+    background-color: whitesmoke;
+    width: 100%;
+    font-family: "Quicksand", sans-serif;
+        
+}
+
+/*CARRUSEL DE IMÁGENES*/
+
+.fileCard figure {
+  
+    margin-top: 2px;
+    margin-bottom: 20px;
+    
 }
 
 .fileCard img {
     display: block;
     text-align: center;
     max-width: 100%;
-
+    
 }
 
 /*INFO DEL ANIMAL*/
 
 .animalInfo {
-
+   
     width:100%;
     overflow: hidden;
 }
 
 
 .info {
-    padding: 0 20px 10px;
-    font-size: 14px ;
+    padding: 20px 40px 20px 40px ;
+    font-size: 15px ;
     color: #34302F;
-    line-height: 150% ;
+    line-height: 150% ;    
 }
 
-.info dl {
-
-}
-
-.info dt, .info dd {
-  display: inline-block;
-}
-
-.info dt {
-  width: 30%;
-}
-
-.info dd {
-  font-weight: bold;
-  width: 70%;
-}
 
 .animalInfo h1 {
-    margin-bottom: 10px;
-    line-height: normal;
-    font-family: "Gloria Hallelujah", serif;
-    font-size: 24px;
-    //border-bottom: 2px double #888;
-
+    margin-bottom: 40px ;
+    margin-top: 20px ;
+    line-height: normal ;
+    font-family: "Gloria Hallelujah", serif ;
+    font-size: 50px;
+    //color: blueviolet ;
+    border-bottom: 2px double #888;
+    
 }
 
 .animalInfo ul {
@@ -111,27 +71,63 @@ header {
   -webkit-font-smoothing: antialiased;
 }
 
+.parrafos{
+    margin-top: 30px ;
+}
 
-/*Botones con Flexbox*/
 
-.buttons {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+/*Botones*/
+
+/* SIN FLEXBOX
+
+.buttons { 
+  text-align: center;
+  padding-bottom: 40px;
+border: 2px double  aquamarine;
 }
 
 .buttons a {
-  width: 240px;
-  padding: 10px;
-  background-color: #78C0A8;
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  text-align: center;
-  border-radius: 9px;
-  margin-top: 15px;
-  -webkit-font-smoothing: antialiased;
+    width: 230px ;
+    display: inline-block ;
+    padding: 20px 20px ;
+    background-color: #78C0A8 ;
+    color: white ;
+    text-decoration: none ;
+    font-size: 25px ;
+    text-align: center ; 
+    margin-top: 40px;
+    border-radius: 9px ;
+    -webkit-font-smoothing: antialiased;
 }
+
+*/
+
+/*Botones con Flexbox*/
+
+.buttons { 
+  padding-bottom: 40px ;
+  display: flex ;
+  align-items: center ;
+  flex-direction: column ;
+ 
+border: 2px double  aquamarine;
+}
+
+.buttons a {
+    width: 230px ;
+    //display: inline-block ;
+    padding: 20px 20px ;
+    background-color: #78C0A8 ;
+    color: white ;
+    text-decoration: none ;
+    font-size: 25px ;
+    text-align: center ; 
+    margin-top: 40px;
+    border-radius: 9px ;
+    -webkit-font-smoothing: antialiased;
+}
+
+
 
 
 
@@ -144,9 +140,8 @@ header {
 
 .animalInfo a:active {
     background-color: palevioletred;
-
+    
 }
-
 
 
 
@@ -159,12 +154,12 @@ header {
 
 /* Esto no se ve en movil */
 .name {
-
+  
   display: none;
 }
 
 .legal {
-
+  
   display: none;
 }
 
@@ -208,10 +203,19 @@ footer div.address {
 }
 
 .logo-btn {
+  //display: inline-block;
   margin: 20px;
 }
 
-
+.icon {
+  //height: 2.1rem;
+  //width: 2.1rem;
+  //line-height: normal;
+  //
+display: inline-block;
+  //vertical-align: middle;
+  //color: black;
+}
 
 .icon svg {
   width: 100%;
@@ -223,155 +227,211 @@ footer div.address {
 
 
 
-@media all and (min-width:681px) {
-
-  /************************************/
-  /************** CARD **************/
-  /************************************/
-  .gallery {
-    box-sizing: border-box;
-  }
-
-.page-text {
-
-}
-
-.titulo {
-  font-size: 48px;
-}
-
-.titulo2 {
-  font-size: 24px;
-}
-
-.texto {
-  font-size: 18px;
-}
-
-
+@media all and (min-width:681px){
+  
+  
   /*
+    
+    .fileCard figure {
+        //width: 30.33%;
+        display: inline-block;
+        vertical-align: top;
+        margin-bottom: 0;
+    
+    }
+    
+    .fileCard figure:nth-child(2) {
+        margin: 0 2%;
+    
+    }
 
-   .fileCard:last-child {
-      width: 100%
-
+     .fileCard figure:last-child {
+        width: 100%
+    
+    }
+  
+  
+  .animalInfo {
+    //width: 30.33%;
+    //padding: 80px ;
+    //margin: 20px ;
   }
+      
 */
-  /************************************/
-  /************** FOOTER **************/
-  /************************************/
-  /* Esto no se ve en tablet/desktop */
-  .back-button {
+  
+  
+  
+/************************************/
+/************** CARD **************/
+/************************************/
+  
+  
+  /*Botones*/
+  
+.buttons { 
+  flex-direction: row ;
+  justify-content: space-between;
+  padding: 0px 80px 40px 80px;
+}
 
-    display: none;
-  }
+  
+/************************************/
 
-  /* Esto se ve en movil */
-  .name {
-    display: block;
-    margin: 40px 0px 40px 35px;
-    line-height: 26px;
-    font-size: 10px;
-  }
+/************************************/  
+  
+  
+    
+  
+  
+/************************************/
+/************** FOOTER **************/
+/************************************/
+
+/* Esto no se ve en tablet/desktop */
+.back-button {
+  
+  display: none;
+}
+  
+/* Esto se ve en movil */
+.name {
+  display:block ;
+  margin: 40px 0px 40px 35px;
+  line-height: 26px;
+  font-size: 10px;
+}
+
 
   .footer {
     display: flex;
     flex-direction: column;
     text-align: center;
   }
-
+  
+  
   .main-footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     text-align: center;
   }
-
+  
   footer div.address {
     margin: 50px 0px 40px 0px;
     line-height: 26px;
     font-size: 12px;
     font-weight: 600;
   }
-
+  
+  
   .social-media {
     margin: 45px 15px 0px 0px;
   }
-
-  .social-media a {
+  
+  .social-media a{
     width: 20px;
     height: 20px;
   }
-
+  
   .legal {
     display: block;
     font-size: 8px;
     margin-bottom: 10px;
     margin-top: 10px;
   }
+  
 }
 
-@media all and (min-width:1024px) {
 
-
-  .page-text {
-    padding-left: 3%;
-    padding-right: 3%;
-    text-align: center;
-  }
-
-  .titulo {
-    font-size: 70px;
-    margin: 50px 0 50px 0;
-  }
-
-  .titulo2 {
-    font-size: 32px;
-    margin-bottom: 48px;
-  }
-
-  .texto {
-    font-size: 30px;
-    font-size: 26px;
-    margin-bottom: 50px;
-  }
-
+@media all and (min-width:1024px){
+  /*  
+    .fileCard {
+        width: 1280px;
+        box-sizing: border-box;
+        margin: auto;
+        background-color: skyblue;
+        
+    }
+    
+    .fileCard figure {
+        width: 48%;
+        display: inline-block;
+        vertical-align: top;
+        margin-bottom: 0;
+    
+    }
+    .fileCard figure:nth-child(2) {
+        margin: 0 0 0 2%;
+    
+    }
+    
+     .fileCard figure:last-child {
+        width: 48%;
+        margin: 0 0 0 2%;
+    
+    }
+  
+   .animalInfo {
+    width: 630px;
+    //padding: 80px ;
+    margin: 20px ;
+  */
+  
   /************************************/
-  /************** CARD **************/
-  /************************************/
-  .gallery {
-    box-sizing: border-box;
-    padding: 0 10%;
-  }
+/************** CARD **************/
+/************************************/
+  
+  
+  /*Botones*/
+  
+.buttons { 
+  flex-direction: row ;
+  justify-content: space-between;
+  padding: 0px 200px 40px 200px;
+}
 
-  .fileCard {
-    width: 337px;
-  }
+  
+/************************************/
 
-  /************************************/
-  /************** FOOTER **************/
-  /************************************/
-  /* Esto se ve en movil */
-  .name {
-    margin: 80px 0px 70px 105px;
+/************************************/  
+  
+  
+  
+
+  
+  
+  
+/************************************/
+/************** FOOTER **************/
+/************************************/
+
+  
+/* Esto se ve en movil */
+.name {
+  margin: 80px 0px 70px 105px;
     font-size: 14px;
-  }
+}
 
+  
   footer div.address {
     margin: 100px 0px 50px 0px;
     font-size: 16px;
-
+  
   }
-
+  
+  
   .social-media {
     margin: 95px 85px 0px 0px;
   }
-
-  .social-media a {
+  
+  .social-media a{
     width: 30px;
     height: 30px;
   }
-
+  
   .legal {
     font-size: 10px;
   }
-}
+  
+  }
+
